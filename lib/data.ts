@@ -70,11 +70,11 @@ export const experience = [
     org: "NexGits Private Limited",
     role: "Data Analyst Intern",
     location: "Ahmedabad, India",
-    period: "Jan 2025 – Jun 2025",
+    period: "Jun 2024 – Jul 2025",
     bullets: [
-      "Built ETL pipelines in Python and SQL that reduced data preparation time by 30% and improved reliability of downstream workflows.",
-      "Developed interactive Tableau, Power BI, and Excel dashboards tracking key metrics — surfacing insights that directly informed 3 strategic decisions within the first month.",
-      "Automated feature engineering pipelines on AWS (S3, EC2) for Linear Regression, SVM, and Gradient Boosting models, cutting manual preprocessing effort by 40%.",
+      "Designed ETL pipelines in Python and SQL to extract, cleanse, and transform structured data across multiple relational tables — reducing data prep time by 30% and surfacing insights that drove real business decisions.",
+      "Built interactive Power BI, Tableau, and Excel dashboards tracking KPIs critical to business unit goals, with standardized reports that directly informed 3 strategic decisions within the first month.",
+      "Automated analytical workflows using Python on AWS, reducing manual effort by 40% and improving the speed and reliability of reporting.",
     ],
   },
   {
@@ -168,6 +168,42 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "k8s-data-platform",
+    title: "Kubernetes Data Platform",
+    period: "May 2026 – Present",
+    category: "Data Engineering",
+    oneLiner:
+      "A production-grade distributed data platform on AWS EKS processing BTS flight-delay data through a Bronze/Silver/Gold medallion architecture — fully provisioned with Terraform.",
+    problem:
+      "Design and operate a real Kubernetes-native data platform end-to-end: infrastructure as code, distributed orchestration, and a full medallion pipeline — the kind of setup most engineers only read about.",
+    architecture: [
+      "AWS EKS cluster provisioned via Terraform (managed node groups, IRSA, Karpenter autoscaling)",
+      "Apache Airflow deployed on Kubernetes via Helm for DAG orchestration",
+      "Apache Spark on Kubernetes for distributed BTS flight-delay processing",
+      "Bronze / Silver / Gold medallion architecture for raw → cleaned → analytics-ready data",
+      "IRSA for fine-grained pod-level AWS IAM permissions without credential sprawl",
+    ],
+    stack: [
+      "Kubernetes",
+      "AWS EKS",
+      "Terraform",
+      "Apache Airflow",
+      "Apache Spark",
+      "PySpark",
+      "Helm",
+      "Docker",
+      "AWS S3",
+      "Python",
+    ],
+    results: [
+      "EKS cluster fully provisioned via Terraform with managed node groups",
+      "Airflow and Spark deployed via Helm on Kubernetes",
+      "Medallion architecture running BTS flight-delay data end-to-end",
+      "In active development — AI-assisted debugging through Helm chart migration and IRSA permissioning",
+    ],
+    github: "https://github.com/jd878-gif/k8s-data-platform",
+  },
   {
     slug: "fraud-sentinel",
     title: "FraudSentinel",
